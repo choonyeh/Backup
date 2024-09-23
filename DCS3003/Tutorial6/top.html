@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Tutorial Lesson 6</title>
+<link rel=icon href=logo.jpg type=image/png>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+
+<style>
+#blink {
+font-size: 30px;
+font-weight: bold;
+font-family: sans-serif;
+text-align:center;
+vertical-align: middle;
+}
+</style>
+
+</head>
+<body>
+<p id="blink">Tutorial Lesson 6</p>
+      
+    <script type="text/javascript">
+        var blink = 
+            document.getElementById('blink');
+            setInterval(function () {
+            blink.style.opacity = 
+            (blink.style.opacity == 0 ? 1 : 0);
+            }, 700); 
+
+		function checkStorage() {
+			const newText = localStorage.getItem('studentName');
+			if (newText) {
+				document.getElementById('blink').innerHTML = newText;
+			}
+		}
+
+		// Check localStorage every second for updates
+		setInterval(checkStorage, 1000);
+    </script>
+
+</body></html>
